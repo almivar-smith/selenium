@@ -10,7 +10,7 @@ class TestWebApp(unittest.TestCase):
     def setUpClass(cls):
         # Configura Chrome amb Selenium
         options = Options()
-        # options.add_argument("--headless")  # Executa en mode sense capçalera (desactiva per veure el navegador)
+        options.add_argument("--headless")  # Executa en mode sense capçalera (desactiva per veure el navegador)
         options.add_argument("--no-sandbox")  # Necessari en entorns CI/CD
         options.add_argument("--disable-dev-shm-usage")  # Evita problemes de memòria compartida
         service = Service("/usr/local/bin/chromedriver")  # Ruta del ChromeDriver
